@@ -836,220 +836,240 @@
     <script>
       // Demo login credentials
       const demoCredentials = {
-          'student@studysphere.com': 'password123',
-          'demo@studysphere.com': 'demo2024',
-          'teacher@studysphere.com': 'teacherpass',
-          'alex.chen@email.com': 'alexpass'
+        "student@studysphere.com": "password123",
+        "demo@studysphere.com": "demo2024",
+        "teacher@studysphere.com": "teacherpass",
+        "alex.chen@email.com": "alexpass",
       };
 
       // Quick login function
       function quickLogin(type) {
-          showLoading();
+        showLoading();
 
-          setTimeout(() => {
-              hideLoading();
-              if (type === 'student') {
-                  window.location.href = 'personal_dashboard.html';
-              } else if (type === 'teacher') {
-                  window.location.href = 'assessment_center.html';
-              }
-          }, 1500);
+        setTimeout(() => {
+          hideLoading();
+          if (type === "student") {
+            window.location.href = "personal_dashboard.html";
+          } else if (type === "teacher") {
+            window.location.href = "assessment_center.html";
+          }
+        }, 1500);
       }
 
       // Password visibility toggle
       function togglePasswordVisibility() {
-          const passwordInput = document.getElementById('password');
-          const eyeIcon = document.getElementById('eyeIcon');
+        const passwordInput = document.getElementById("password");
+        const eyeIcon = document.getElementById("eyeIcon");
 
-          if (passwordInput.type === 'password') {
-              passwordInput.type = 'text';
-              eyeIcon.innerHTML = `
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          eyeIcon.innerHTML = `
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21"/>
               `;
-          } else {
-              passwordInput.type = 'password';
-              eyeIcon.innerHTML = `
+        } else {
+          passwordInput.type = "password";
+          eyeIcon.innerHTML = `
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
               `;
-          }
+        }
       }
 
       // Password strength checker
       function checkPasswordStrength(password) {
-          const strengthIndicator = document.getElementById('passwordStrength');
-          const strengthBar = document.getElementById('strengthBar');
-          const strengthText = document.getElementById('strengthText');
+        const strengthIndicator = document.getElementById("passwordStrength");
+        const strengthBar = document.getElementById("strengthBar");
+        const strengthText = document.getElementById("strengthText");
 
-          if (password.length === 0) {
-              strengthIndicator.classList.add('hidden');
-              return;
-          }
+        if (password.length === 0) {
+          strengthIndicator.classList.add("hidden");
+          return;
+        }
 
-          strengthIndicator.classList.remove('hidden');
+        strengthIndicator.classList.remove("hidden");
 
-          let strength = 0;
+        let strength = 0;
 
-          // Length check
-          if (password.length >= 8) strength += 1;
-          // Character variety checks
-          if (/[a-z]/.test(password)) strength += 1;
-          if (/[A-Z]/.test(password)) strength += 1;
-          if (/[0-9]/.test(password)) strength += 1;
-          if (/[^A-Za-z0-9]/.test(password)) strength += 1;
+        // Length check
+        if (password.length >= 8) strength += 1;
+        // Character variety checks
+        if (/[a-z]/.test(password)) strength += 1;
+        if (/[A-Z]/.test(password)) strength += 1;
+        if (/[0-9]/.test(password)) strength += 1;
+        if (/[^A-Za-z0-9]/.test(password)) strength += 1;
 
-          // Update visual indicator
-          switch (strength) {
-              case 0:
-              case 1:
-                  strengthBar.style.width = '20%';
-                  strengthBar.className = 'h-1 rounded-full transition-all duration-300 bg-red-500';
-                  strengthText.textContent = 'Weak';
-                  strengthText.className = 'text-xs font-medium text-red-600';
-                  break;
-              case 2:
-                  strengthBar.style.width = '40%';
-                  strengthBar.className = 'h-1 rounded-full transition-all duration-300 bg-orange-500';
-                  strengthText.textContent = 'Fair';
-                  strengthText.className = 'text-xs font-medium text-orange-600';
-                  break;
-              case 3:
-                  strengthBar.style.width = '60%';
-                  strengthBar.className = 'h-1 rounded-full transition-all duration-300 bg-yellow-500';
-                  strengthText.textContent = 'Good';
-                  strengthText.className = 'text-xs font-medium text-yellow-600';
-                  break;
-              case 4:
-                  strengthBar.style.width = '80%';
-                  strengthBar.className = 'h-1 rounded-full transition-all duration-300 bg-blue-500';
-                  strengthText.textContent = 'Strong';
-                  strengthText.className = 'text-xs font-medium text-blue-600';
-                  break;
-              case 5:
-                  strengthBar.style.width = '100%';
-                  strengthBar.className = 'h-1 rounded-full transition-all duration-300 bg-green-500';
-                  strengthText.textContent = 'Very Strong';
-                  strengthText.className = 'text-xs font-medium text-green-600';
-                  break;
-          }
+        // Update visual indicator
+        switch (strength) {
+          case 0:
+          case 1:
+            strengthBar.style.width = "20%";
+            strengthBar.className =
+              "h-1 rounded-full transition-all duration-300 bg-red-500";
+            strengthText.textContent = "Weak";
+            strengthText.className = "text-xs font-medium text-red-600";
+            break;
+          case 2:
+            strengthBar.style.width = "40%";
+            strengthBar.className =
+              "h-1 rounded-full transition-all duration-300 bg-orange-500";
+            strengthText.textContent = "Fair";
+            strengthText.className = "text-xs font-medium text-orange-600";
+            break;
+          case 3:
+            strengthBar.style.width = "60%";
+            strengthBar.className =
+              "h-1 rounded-full transition-all duration-300 bg-yellow-500";
+            strengthText.textContent = "Good";
+            strengthText.className = "text-xs font-medium text-yellow-600";
+            break;
+          case 4:
+            strengthBar.style.width = "80%";
+            strengthBar.className =
+              "h-1 rounded-full transition-all duration-300 bg-blue-500";
+            strengthText.textContent = "Strong";
+            strengthText.className = "text-xs font-medium text-blue-600";
+            break;
+          case 5:
+            strengthBar.style.width = "100%";
+            strengthBar.className =
+              "h-1 rounded-full transition-all duration-300 bg-green-500";
+            strengthText.textContent = "Very Strong";
+            strengthText.className = "text-xs font-medium text-green-600";
+            break;
+        }
       }
 
       // Loading overlay functions
       function showLoading() {
-          document.getElementById('loadingOverlay').classList.remove('hidden');
-          document.getElementById('loadingOverlay').classList.add('flex');
+        document.getElementById("loadingOverlay").classList.remove("hidden");
+        document.getElementById("loadingOverlay").classList.add("flex");
       }
 
       function hideLoading() {
-          document.getElementById('loadingOverlay').classList.add('hidden');
-          document.getElementById('loadingOverlay').classList.remove('flex');
+        document.getElementById("loadingOverlay").classList.add("hidden");
+        document.getElementById("loadingOverlay").classList.remove("flex");
       }
 
       // Forgot password modal functions
       function showForgotPassword() {
-          document.getElementById('forgotPasswordModal').classList.remove('hidden');
-          document.getElementById('forgotPasswordModal').classList.add('flex');
+        document
+          .getElementById("forgotPasswordModal")
+          .classList.remove("hidden");
+        document.getElementById("forgotPasswordModal").classList.add("flex");
       }
 
       function hideForgotPassword() {
-          document.getElementById('forgotPasswordModal').classList.add('hidden');
-          document.getElementById('forgotPasswordModal').classList.remove('flex');
+        document.getElementById("forgotPasswordModal").classList.add("hidden");
+        document.getElementById("forgotPasswordModal").classList.remove("flex");
       }
 
       // Event listeners
-      document.addEventListener('DOMContentLoaded', function() {
-          const passwordInput = document.getElementById('password');
-          passwordInput.addEventListener('input', function() {
-              checkPasswordStrength(this.value);
-          });
+      document.addEventListener("DOMContentLoaded", function () {
+        const passwordInput = document.getElementById("password");
+        passwordInput.addEventListener("input", function () {
+          checkPasswordStrength(this.value);
+        });
 
-          // Login form submission
-          document.getElementById('loginForm').addEventListener('submit', function(e) {
-              e.preventDefault();
-              const email = document.getElementById('email').value;
-              const password = document.getElementById('password').value;
+        // Login form submission
+        document
+          .getElementById("loginForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
 
-              showLoading();
+            showLoading();
 
-              // Simulate authentication
-              setTimeout(() => {
-                  hideLoading();
+            // Simulate authentication
+            setTimeout(() => {
+              hideLoading();
 
-                  if (demoCredentials[email] === password) {
-                      // Successful login
-                      if (email.includes('teacher')) {
-                          window.location.href = 'assessment_center.html';
-                      } else {
-                          window.location.href = 'personal_dashboard.html';
-                      }
-                  } else {
-                      // Failed login
-                      alert('Invalid email or password. Please try one of the demo accounts:\n\n• student@studysphere.com (password123)\n• teacher@studysphere.com (teacherpass)\n• demo@studysphere.com (demo2024)');
-                  }
-              }, 1500);
-          });
-
-          // Forgot password form submission
-          document.getElementById('forgotPasswordForm').addEventListener('submit', function(e) {
-              e.preventDefault();
-              const email = document.getElementById('resetEmail').value;
-
-              showLoading();
-
-              setTimeout(() => {
-                  hideLoading();
-                  hideForgotPassword();
-
-                  alert(Password reset link has been sent to ${email}.\n\nFor demo purposes, you can use:\n• student@studysphere.com (password123)\n• teacher@studysphere.com (teacherpass));
-              }, 1000);
-          });
-
-          // Close modal when clicking outside
-          document.getElementById('forgotPasswordModal').addEventListener('click', function(e) {
-              if (e.target === this) {
-                  hideForgotPassword();
-              }
-          });
-
-          // Auto-fill email on demo credential click
-          document.addEventListener('click', function(e) {
-              if (e.target.classList.contains('px-2') && e.target.textContent.includes('@')) {
-                  document.getElementById('email').value = e.target.textContent;
-                  document.getElementById('email').focus();
-              }
-          });
-
-          // Keyboard shortcuts
-          document.addEventListener('keydown', function(e) {
-              if (e.key === 'Escape') {
-                  hideForgotPassword();
-              }
-          });
-
-          // Form validation enhancements
-          const emailInput = document.getElementById('email');
-          emailInput.addEventListener('blur', function() {
-              const email = this.value;
-              if (email && !email.includes('@')) {
-                  this.classList.add('border-red-300');
-                  this.classList.remove('border-gray-300');
+              if (demoCredentials[email] === password) {
+                // Successful login
+                if (email.includes("teacher")) {
+                  window.location.href = "assessment_center.html";
+                } else {
+                  window.location.href = "personal_dashboard.html";
+                }
               } else {
-                  this.classList.remove('border-red-300');
-                  this.classList.add('border-gray-300');
+                // Failed login
+                alert(
+                  "Invalid email or password. Please try one of the demo accounts:\n\n• student@studysphere.com (password123)\n• teacher@studysphere.com (teacherpass)\n• demo@studysphere.com (demo2024)"
+                );
               }
+            }, 1500);
           });
+
+        // Forgot password form submission
+        document
+          .getElementById("forgotPasswordForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            const email = document.getElementById("resetEmail").value;
+
+            showLoading();
+
+            setTimeout(() => {
+              hideLoading();
+              hideForgotPassword();
+
+              alert(
+                `Password reset link has been sent to ${email}.\n\nFor demo purposes, you can use:\n• student@studysphere.com (password123)\n• teacher@studysphere.com (teacherpass)`
+              );
+            }, 1000);
+          });
+
+        // Close modal when clicking outside
+        document
+          .getElementById("forgotPasswordModal")
+          .addEventListener("click", function (e) {
+            if (e.target === this) {
+              hideForgotPassword();
+            }
+          });
+
+        // Auto-fill email on demo credential click
+        document.addEventListener("click", function (e) {
+          if (
+            e.target.classList.contains("px-2") &&
+            e.target.textContent.includes("@")
+          ) {
+            document.getElementById("email").value = e.target.textContent;
+            document.getElementById("email").focus();
+          }
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            hideForgotPassword();
+          }
+        });
+
+        // Form validation enhancements
+        const emailInput = document.getElementById("email");
+        emailInput.addEventListener("blur", function () {
+          const email = this.value;
+          if (email && !email.includes("@")) {
+            this.classList.add("border-red-300");
+            this.classList.remove("border-gray-300");
+          } else {
+            this.classList.remove("border-red-300");
+            this.classList.add("border-gray-300");
+          }
+        });
       });
 
       // Animation on load
-      window.addEventListener('load', function() {
-          document.body.style.opacity = '0';
-          document.body.style.transform = 'translateY(20px)';
+      window.addEventListener("load", function () {
+        document.body.style.opacity = "0";
+        document.body.style.transform = "translateY(20px)";
 
-          setTimeout(() => {
-              document.body.style.transition = 'all 0.6s ease-out';
-              document.body.style.opacity = '1';
-              document.body.style.transform = 'translateY(0)';
-          }, 100);
+        setTimeout(() => {
+          document.body.style.transition = "all 0.6s ease-out";
+          document.body.style.opacity = "1";
+          document.body.style.transform = "translateY(0)";
+        }, 100);
       });
     </script>
     <script
