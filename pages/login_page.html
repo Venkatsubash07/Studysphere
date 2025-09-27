@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - StudySphere | Your Learning Journey Awaits</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      type="module"
+      src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fstudyspher7080back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"
+    ></script>
+  </head>
+  <body
+    class="learning-sanctuary min-h-screen flex items-center justify-center px-4"
+  >
+    <!-- Background Educational Graphics -->
+    <div class="absolute inset-0 overflow-hidden opacity-10">
+      <div
+        class="absolute top-10 left-10 w-16 h-16 border-2 border-primary-400 rounded-full"
+      ></div>
+      <div
+        class="absolute top-32 right-20 w-12 h-12 bg-secondary-200 rounded-lg rotate-45"
+      ></div>
+      <div
+        class="absolute bottom-20 left-1/4 w-8 h-20 bg-accent-200 rounded-full"
+      ></div>
+      <div
+        class="absolute bottom-40 right-1/3 w-24 h-2 bg-success-300 rounded-full"
+      ></div>
+      <div
+        class="absolute top-1/2 left-1/6 w-6 h-6 bg-primary-300 rounded-full"
+      ></div>
+      <div
+        class="absolute top-1/3 right-1/4 w-14 h-14 border-2 border-accent-300 rounded"
+      ></div>
+    </div>
+
+    <!-- Main Login Container -->
+    <div
+      class="w-full max-w-6xl bg-white/95 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden relative z-10"
+    >
+      <div class="flex min-h-[600px]">
+        <!-- Left Side - Login Form -->
+        <div class="flex-1 p-8 lg:p-12">
+          <!-- Header with StudySphere Branding -->
+          <div class="text-center mb-8">
+            <div
+              class="mx-auto h-20 w-20 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-full flex items-center justify-center mb-6 shadow-lg"
+            >
+              <svg
+                class="h-10 w-10 text-white"
+                viewBox="0 0 32 32"
+                fill="currentColor"
+              >
+                <circle
+                  cx="16"
+                  cy="16"
+                  r="14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  opacity="0.3"
+                />
+                <circle
+                  cx="16"
+                  cy="16"
+                  r="8"
+                  fill="currentColor"
+                  opacity="0.5"
+                />
+                <circle cx="16" cy="16" r="4" fill="currentColor" />
+                <path
+                  d="M16 2 L20 8 L16 14 L12 8 Z"
+                  fill="currentColor"
+                  opacity="0.8"
+                />
+                <path
+                  d="M30 16 L24 20 L18 16 L24 12 Z"
+                  fill="currentColor"
+                  opacity="0.8"
+                />
+                <path
+                  d="M16 30 L12 24 L16 18 L20 24 Z"
+                  fill="currentColor"
+                  opacity="0.8"
+                />
+                <path
+                  d="M2 16 L8 12 L14 16 L8 20 Z"
+                  fill="currentColor"
+                  opacity="0.8"
+                />
+              </svg>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">
+              Welcome to StudySphere
+            </h1>
+            <p class="text-gray-600 text-lg mb-1">
+              Your Universe of Knowledge Awaits
+            </p>
+            <p class="text-sm text-gray-500">
+              Sign in to access your personalized learning journey
+            </p>
+          </div>
+
+          <!-- Quick Login Buttons -->
+          <div class="space-y-4 mb-6">
+            <button
+              onclick="quickLogin('student')"
+              class="w-full flex items-center justify-between px-6 py-4 bg-gradient-to-r from-primary-50 to-primary-100 border border-primary-200 rounded-lg shadow-sm hover:shadow-md hover:border-primary-300 transition-all duration-300 group"
+            >
+              <div class="flex items-center">
+                <div
+                  class="h-12 w-12 bg-primary-500 rounded-full flex items-center justify-center mr-4 group-hover:scale-105 transition-transform"
+                >
+                  <svg
+                    class="h-6 w-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                    />
+                  </svg>
+                </div>
+                <div class="text-left">
+                  <h3 class="text-lg font-semibold text-primary-900">
+                    Student Login
+                  </h3>
+                  <p class="text-sm text-primary-700">
+                    Access courses and track progress
+                  </p>
+                </div>
+              </div>
+              <svg
+                class="h-5 w-5 text-primary-600 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+
+            <button
+              onclick="quickLogin('teacher')"
+              class="w-full flex items-center justify-between px-6 py-4 bg-gradient-to-r from-secondary-50 to-secondary-100 border border-secondary-200 rounded-lg shadow-sm hover:shadow-md hover:border-secondary-300 transition-all duration-300 group"
+            >
+              <div class="flex items-center">
+                <div
+                  class="h-12 w-12 bg-secondary-500 rounded-full flex items-center justify-center mr-4 group-hover:scale-105 transition-transform"
+                >
+                  <svg
+                    class="h-6 w-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                    />
+                  </svg>
+                </div>
+                <div class="text-left">
+                  <h3 class="text-lg font-semibold text-secondary-900">
+                    Teacher Login
+                  </h3>
+                  <p class="text-sm text-secondary-700">
+                    Manage classes and assignments
+                  </p>
+                </div>
+              </div>
+              <svg
+                class="h-5 w-5 text-secondary-600 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Social Login Options -->
+          <div class="mb-6">
+            <div class="relative mb-4">
+              <div class="absolute inset-0 flex items-center">
+                <div class="w-full border-t border-gray-200"></div>
+              </div>
+              <div class="relative flex justify-center text-sm">
+                <span class="px-2 bg-white text-gray-500"
+                  >Or continue with</span
+                >
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3">
+              <button
+                class="flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 hover:shadow-md transition-all duration-300"
+              >
+                <svg class="h-5 w-5" viewBox="0 0 24 24">
+                  <path
+                    fill="#4285F4"
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  />
+                  <path
+                    fill="#34A853"
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                  />
+                  <path
+                    fill="#FBBC05"
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                  />
+                  <path
+                    fill="#EA4335"
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                  />
+                </svg>
+              </button>
+
+              <button
+                class="flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 hover:shadow-md transition-all duration-300"
+              >
+                <svg class="h-5 w-5" fill="#1877F2" viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </button>
+
+              <button
+                class="flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 hover:shadow-md transition-all duration-300"
+              >
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Manual Login Form -->
+          <form class="space-y-5" id="loginForm">
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-700 mb-2"
+                >Email Address</label
+              >
+              <div class="relative">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  class="input-field w-full pl-10"
+                  placeholder="Enter your email address"
+                />
+                <div
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                >
+                  <svg
+                    class="h-5 w-5 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label
+                for="password"
+                class="block text-sm font-medium text-gray-700 mb-2"
+                >Password</label
+              >
+              <div class="relative">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  autocomplete="current-password"
+                  required
+                  class="input-field w-full pl-10 pr-10"
+                  placeholder="Enter your password"
+                />
+                <div
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                >
+                  <svg
+                    class="h-5 w-5 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                    />
+                  </svg>
+                </div>
+                <button
+                  type="button"
+                  class="absolute inset-y-0 right-0 pr-3 flex items-center"
+                  onclick="togglePasswordVisibility()"
+                >
+                  <svg
+                    id="eyeIcon"
+                    class="h-5 w-5 text-gray-400 hover:text-gray-600 transition-colors"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Password Strength Indicator -->
+              <div id="passwordStrength" class="mt-2 hidden">
+                <div class="flex items-center space-x-2">
+                  <div class="flex-1 bg-gray-200 rounded-full h-1">
+                    <div
+                      id="strengthBar"
+                      class="h-1 rounded-full transition-all duration-300"
+                    ></div>
+                  </div>
+                  <span id="strengthText" class="text-xs font-medium"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <input
+                  id="remember-me"
+                  name="remember-me"
+                  type="checkbox"
+                  class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
+                />
+                <label
+                  for="remember-me"
+                  class="ml-2 block text-sm text-gray-700"
+                  >Remember me</label
+                >
+              </div>
+
+              <div class="text-sm">
+                <a
+                  href="javascript:void(0)"
+                  onclick="showForgotPassword()"
+                  class="text-primary-600 hover:text-primary-500 font-medium transition-colors"
+                >
+                  Forgot password?
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                class="btn-primary w-full text-lg py-3 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <span class="flex items-center justify-center">
+                  <svg
+                    class="h-5 w-5 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+                    />
+                  </svg>
+                  Sign In to StudySphere
+                </span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Sign Up Link -->
+          <div class="text-center mt-6">
+            <p class="text-sm text-gray-600">
+              Don't have an account?
+              <a
+                href="javascript:void(0)"
+                class="text-primary-600 hover:text-primary-500 font-medium transition-colors"
+                >Create your StudySphere account</a
+              >
+            </p>
+          </div>
+
+          <!-- Quick Access Links -->
+          <div class="mt-8 pt-6 border-t border-gray-200">
+            <div class="text-center">
+              <p class="text-xs text-gray-500 mb-3">Quick Access for Demo</p>
+              <div class="flex flex-wrap justify-center gap-2 text-xs">
+                <span class="px-2 py-1 bg-primary-100 text-primary-800 rounded"
+                  >student@studysphere.com</span
+                >
+                <span
+                  class="px-2 py-1 bg-secondary-100 text-secondary-800 rounded"
+                  >teacher@studysphere.com</span
+                >
+                <span class="px-2 py-1 bg-accent-100 text-accent-800 rounded"
+                  >demo@studysphere.com</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side - Educational Content -->
+        <div
+          class="hidden lg:flex lg:flex-1 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-800 relative overflow-hidden"
+        >
+          <!-- Background Pattern -->
+          <div class="absolute inset-0 opacity-20">
+            <div
+              class="absolute top-20 left-20 w-32 h-32 border border-white rounded-full"
+            ></div>
+            <div
+              class="absolute top-40 right-16 w-24 h-24 bg-white/10 rounded-lg rotate-12"
+            ></div>
+            <div
+              class="absolute bottom-32 left-16 w-16 h-40 bg-white/10 rounded-full"
+            ></div>
+            <div
+              class="absolute bottom-20 right-32 w-48 h-4 bg-white/10 rounded-full"
+            ></div>
+            <div
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 rounded-full"
+            ></div>
+          </div>
+
+          <div
+            class="relative z-10 flex flex-col justify-center px-12 py-16 text-white"
+          >
+            <div class="max-w-md">
+              <!-- Educational Statistics -->
+              <div class="mb-12">
+                <h2 class="text-4xl font-bold mb-4">Join 50,000+ Learners</h2>
+                <p class="text-xl text-white/90 mb-8">
+                  Transform your education with personalized learning paths and
+                  expert instruction
+                </p>
+
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                  <div class="text-center">
+                    <div class="text-3xl font-bold text-accent-400">98%</div>
+                    <div class="text-sm text-white/80">Success Rate</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-3xl font-bold text-accent-400">500+</div>
+                    <div class="text-sm text-white/80">Courses</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-3xl font-bold text-accent-400">4.9★</div>
+                    <div class="text-sm text-white/80">Avg Rating</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-3xl font-bold text-accent-400">24/7</div>
+                    <div class="text-sm text-white/80">Support</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Student Success Stories -->
+              <div class="space-y-6">
+                <div
+                  class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+                >
+                  <div class="flex items-center mb-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
+                      alt="Sarah Chen"
+                      class="w-12 h-12 rounded-full object-cover mr-4"
+                      onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face';"
+                    />
+                    <div>
+                      <h4 class="font-semibold">Sarah Chen</h4>
+                      <p class="text-white/80 text-sm">Mathematics Student</p>
+                    </div>
+                  </div>
+                  <p class="text-white/90 text-sm leading-relaxed">
+                    "StudySphere's personalized approach helped me improve from
+                    C+ to A- in calculus. The interactive lessons made complex
+                    concepts finally click!"
+                  </p>
+                  <div class="flex items-center mt-3">
+                    <div class="flex space-x-1">
+                      <svg
+                        class="h-4 w-4 text-accent-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                        />
+                      </svg>
+                      <svg
+                        class="h-4 w-4 text-accent-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                        />
+                      </svg>
+                      <svg
+                        class="h-4 w-4 text-accent-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                        />
+                      </svg>
+                      <svg
+                        class="h-4 w-4 text-accent-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                        />
+                      </svg>
+                      <svg
+                        class="h-4 w-4 text-accent-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                        />
+                      </svg>
+                    </div>
+                    <span class="text-white/80 text-xs ml-2">5.0 stars</span>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+                >
+                  <div class="flex items-center mb-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
+                      alt="Alex Thompson"
+                      class="w-12 h-12 rounded-full object-cover mr-4"
+                      onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face';"
+                    />
+                    <div>
+                      <h4 class="font-semibold">Alex Thompson</h4>
+                      <p class="text-white/80 text-sm">Physics Student</p>
+                    </div>
+                  </div>
+                  <p class="text-white/90 text-sm leading-relaxed">
+                    "The quantum physics simulations are incredible! Complex
+                    theories became crystal clear. Got accepted to MIT thanks to
+                    StudySphere!"
+                  </p>
+                  <div class="flex items-center mt-3">
+                    <div class="flex space-x-1">
+                      <svg
+                        class="h-4 w-4 text-accent-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                        />
+                      </svg>
+                      <svg
+                        class="h-4 w-4 text-accent-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                        />
+                      </svg>
+                      <svg
+                        class="h-4 w-4 text-accent-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                        />
+                      </svg>
+                      <svg
+                        class="h-4 w-4 text-accent-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                        />
+                      </svg>
+                      <svg
+                        class="h-4 w-4 text-accent-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                        />
+                      </svg>
+                    </div>
+                    <span class="text-white/80 text-xs ml-2">5.0 stars</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Trust Indicators -->
+              <div class="mt-8 pt-6 border-t border-white/20">
+                <div
+                  class="flex items-center justify-center space-x-8 text-white/80"
+                >
+                  <div class="flex items-center space-x-2">
+                    <svg
+                      class="h-5 w-5 text-green-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="text-xs">SSL Secured</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <svg
+                      class="h-5 w-5 text-blue-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="text-xs">GDPR Compliant</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <svg
+                      class="h-5 w-5 text-purple-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="text-xs">WCAG 2.1 AA</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div
+      id="forgotPasswordModal"
+      class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-50 px-4"
+    >
+      <div class="bg-white rounded-xl p-8 max-w-md w-full shadow-2xl">
+        <div class="text-center mb-6">
+          <div
+            class="mx-auto h-12 w-12 bg-primary-100 rounded-full flex items-center justify-center mb-4"
+          >
+            <svg
+              class="h-6 w-6 text-primary-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">
+            Reset Your Password
+          </h3>
+          <p class="text-gray-600">
+            Enter your email address and we'll send you a secure link to reset
+            your password.
+          </p>
+        </div>
+
+        <form id="forgotPasswordForm" class="space-y-4">
+          <div>
+            <label
+              for="resetEmail"
+              class="block text-sm font-medium text-gray-700 mb-2"
+              >Email Address</label
+            >
+            <input
+              id="resetEmail"
+              name="resetEmail"
+              type="email"
+              required
+              class="input-field w-full"
+              placeholder="Enter your email address"
+            />
+          </div>
+
+          <div class="flex space-x-3">
+            <button
+              type="button"
+              onclick="hideForgotPassword()"
+              class="flex-1 px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
+            >
+              Cancel
+            </button>
+            <button type="submit" class="flex-1 btn-primary">
+              Send Reset Link
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div
+      id="loadingOverlay"
+      class="fixed inset-0 bg-white/90 backdrop-blur-sm hidden items-center justify-center z-50"
+    >
+      <div class="text-center">
+        <div
+          class="mx-auto h-16 w-16 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-full flex items-center justify-center mb-4 animate-spin"
+        >
+          <svg
+            class="h-8 w-8 text-white"
+            viewBox="0 0 32 32"
+            fill="currentColor"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              r="14"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              opacity="0.3"
+            />
+            <circle cx="16" cy="16" r="8" fill="currentColor" opacity="0.5" />
+            <circle cx="16" cy="16" r="4" fill="currentColor" />
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">
+          Signing you in...
+        </h3>
+        <p class="text-gray-600">
+          Please wait while we verify your credentials
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer Navigation -->
+    <div class="fixed bottom-6 right-6">
+      <a
+        href="homepage.html"
+        class="inline-flex items-center px-4 py-2 bg-white/90 hover:bg-white border border-gray-200 rounded-full shadow-lg text-sm font-medium text-gray-700 hover:text-gray-900 transition-all duration-300"
+      >
+        <svg
+          class="h-4 w-4 mr-2"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+          />
+        </svg>
+        Back to Homepage
+      </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      // Demo login credentials
+      const demoCredentials = {
+          'student@studysphere.com': 'password123',
+          'demo@studysphere.com': 'demo2024',
+          'teacher@studysphere.com': 'teacherpass',
+          'alex.chen@email.com': 'alexpass'
+      };
+
+      // Quick login function
+      function quickLogin(type) {
+          showLoading();
+
+          setTimeout(() => {
+              hideLoading();
+              if (type === 'student') {
+                  window.location.href = 'personal_dashboard.html';
+              } else if (type === 'teacher') {
+                  window.location.href = 'assessment_center.html';
+              }
+          }, 1500);
+      }
+
+      // Password visibility toggle
+      function togglePasswordVisibility() {
+          const passwordInput = document.getElementById('password');
+          const eyeIcon = document.getElementById('eyeIcon');
+
+          if (passwordInput.type === 'password') {
+              passwordInput.type = 'text';
+              eyeIcon.innerHTML = `
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21"/>
+              `;
+          } else {
+              passwordInput.type = 'password';
+              eyeIcon.innerHTML = `
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+              `;
+          }
+      }
+
+      // Password strength checker
+      function checkPasswordStrength(password) {
+          const strengthIndicator = document.getElementById('passwordStrength');
+          const strengthBar = document.getElementById('strengthBar');
+          const strengthText = document.getElementById('strengthText');
+
+          if (password.length === 0) {
+              strengthIndicator.classList.add('hidden');
+              return;
+          }
+
+          strengthIndicator.classList.remove('hidden');
+
+          let strength = 0;
+
+          // Length check
+          if (password.length >= 8) strength += 1;
+          // Character variety checks
+          if (/[a-z]/.test(password)) strength += 1;
+          if (/[A-Z]/.test(password)) strength += 1;
+          if (/[0-9]/.test(password)) strength += 1;
+          if (/[^A-Za-z0-9]/.test(password)) strength += 1;
+
+          // Update visual indicator
+          switch (strength) {
+              case 0:
+              case 1:
+                  strengthBar.style.width = '20%';
+                  strengthBar.className = 'h-1 rounded-full transition-all duration-300 bg-red-500';
+                  strengthText.textContent = 'Weak';
+                  strengthText.className = 'text-xs font-medium text-red-600';
+                  break;
+              case 2:
+                  strengthBar.style.width = '40%';
+                  strengthBar.className = 'h-1 rounded-full transition-all duration-300 bg-orange-500';
+                  strengthText.textContent = 'Fair';
+                  strengthText.className = 'text-xs font-medium text-orange-600';
+                  break;
+              case 3:
+                  strengthBar.style.width = '60%';
+                  strengthBar.className = 'h-1 rounded-full transition-all duration-300 bg-yellow-500';
+                  strengthText.textContent = 'Good';
+                  strengthText.className = 'text-xs font-medium text-yellow-600';
+                  break;
+              case 4:
+                  strengthBar.style.width = '80%';
+                  strengthBar.className = 'h-1 rounded-full transition-all duration-300 bg-blue-500';
+                  strengthText.textContent = 'Strong';
+                  strengthText.className = 'text-xs font-medium text-blue-600';
+                  break;
+              case 5:
+                  strengthBar.style.width = '100%';
+                  strengthBar.className = 'h-1 rounded-full transition-all duration-300 bg-green-500';
+                  strengthText.textContent = 'Very Strong';
+                  strengthText.className = 'text-xs font-medium text-green-600';
+                  break;
+          }
+      }
+
+      // Loading overlay functions
+      function showLoading() {
+          document.getElementById('loadingOverlay').classList.remove('hidden');
+          document.getElementById('loadingOverlay').classList.add('flex');
+      }
+
+      function hideLoading() {
+          document.getElementById('loadingOverlay').classList.add('hidden');
+          document.getElementById('loadingOverlay').classList.remove('flex');
+      }
+
+      // Forgot password modal functions
+      function showForgotPassword() {
+          document.getElementById('forgotPasswordModal').classList.remove('hidden');
+          document.getElementById('forgotPasswordModal').classList.add('flex');
+      }
+
+      function hideForgotPassword() {
+          document.getElementById('forgotPasswordModal').classList.add('hidden');
+          document.getElementById('forgotPasswordModal').classList.remove('flex');
+      }
+
+      // Event listeners
+      document.addEventListener('DOMContentLoaded', function() {
+          const passwordInput = document.getElementById('password');
+          passwordInput.addEventListener('input', function() {
+              checkPasswordStrength(this.value);
+          });
+
+          // Login form submission
+          document.getElementById('loginForm').addEventListener('submit', function(e) {
+              e.preventDefault();
+              const email = document.getElementById('email').value;
+              const password = document.getElementById('password').value;
+
+              showLoading();
+
+              // Simulate authentication
+              setTimeout(() => {
+                  hideLoading();
+
+                  if (demoCredentials[email] === password) {
+                      // Successful login
+                      if (email.includes('teacher')) {
+                          window.location.href = 'assessment_center.html';
+                      } else {
+                          window.location.href = 'personal_dashboard.html';
+                      }
+                  } else {
+                      // Failed login
+                      alert('Invalid email or password. Please try one of the demo accounts:\n\n• student@studysphere.com (password123)\n• teacher@studysphere.com (teacherpass)\n• demo@studysphere.com (demo2024)');
+                  }
+              }, 1500);
+          });
+
+          // Forgot password form submission
+          document.getElementById('forgotPasswordForm').addEventListener('submit', function(e) {
+              e.preventDefault();
+              const email = document.getElementById('resetEmail').value;
+
+              showLoading();
+
+              setTimeout(() => {
+                  hideLoading();
+                  hideForgotPassword();
+
+                  alert(Password reset link has been sent to ${email}.\n\nFor demo purposes, you can use:\n• student@studysphere.com (password123)\n• teacher@studysphere.com (teacherpass));
+              }, 1000);
+          });
+
+          // Close modal when clicking outside
+          document.getElementById('forgotPasswordModal').addEventListener('click', function(e) {
+              if (e.target === this) {
+                  hideForgotPassword();
+              }
+          });
+
+          // Auto-fill email on demo credential click
+          document.addEventListener('click', function(e) {
+              if (e.target.classList.contains('px-2') && e.target.textContent.includes('@')) {
+                  document.getElementById('email').value = e.target.textContent;
+                  document.getElementById('email').focus();
+              }
+          });
+
+          // Keyboard shortcuts
+          document.addEventListener('keydown', function(e) {
+              if (e.key === 'Escape') {
+                  hideForgotPassword();
+              }
+          });
+
+          // Form validation enhancements
+          const emailInput = document.getElementById('email');
+          emailInput.addEventListener('blur', function() {
+              const email = this.value;
+              if (email && !email.includes('@')) {
+                  this.classList.add('border-red-300');
+                  this.classList.remove('border-gray-300');
+              } else {
+                  this.classList.remove('border-red-300');
+                  this.classList.add('border-gray-300');
+              }
+          });
+      });
+
+      // Animation on load
+      window.addEventListener('load', function() {
+          document.body.style.opacity = '0';
+          document.body.style.transform = 'translateY(20px)';
+
+          setTimeout(() => {
+              document.body.style.transition = 'all 0.6s ease-out';
+              document.body.style.opacity = '1';
+              document.body.style.transform = 'translateY(0)';
+          }, 100);
+      });
+    </script>
+    <script
+      id="dhws-dataInjector"
+      src="../public/dhws-data-injector.js"
+    ></script>
+  </body>
+</html>
